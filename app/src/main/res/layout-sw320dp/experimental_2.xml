@@ -44,7 +44,7 @@
                 app:layout_constraintEnd_toEndOf="@id/guideline4"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/cl2"
-                app:layout_constraintDimensionRatio="1:1">
+                app:layout_constraintDimensionRatio="1:0.5">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                             android:layout_height="0dp"
                             android:src="@drawable/current"
                             app:layout_constraintBottom_toTopOf="@id/currentTxt"
-                            app:layout_constraintDimensionRatio="0.4:0.10"
+                            app:layout_constraintDimensionRatio="0.4:0.06"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -91,7 +91,7 @@
                             android:textSize="20sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintDimensionRatio="0.4:0.15"
+                            app:layout_constraintDimensionRatio="0.4:0.10"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/img1" />
@@ -107,14 +107,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="20dp"
             app:layout_constraintStart_toStartOf="@id/guideline4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1:1">
+            app:layout_constraintBottom_toTopOf="@id/cl4"
+            app:layout_constraintDimensionRatio="1:0.5">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -125,7 +126,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
 
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="parent"
                 >
 
                 <com.github.furkankaplan.fkblurview.FKBlurView
@@ -150,7 +151,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:gravity="center"
-                        android:text="Min"
+                        android:text="Min/Max"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -170,7 +171,7 @@
                         android:textColor="@color/black"
 
                         android:textSize="15sp"
-                        app:layout_constraintBottom_toTopOf="@+id/viewOnly"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="0.4:0.10"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -178,34 +179,9 @@
                         app:layout_constraintVertical_bias="0.5" />
 
 
-                    <View
-                        android:id="@+id/viewOnly"
-                        android:layout_width="0dp"
-                        android:layout_height="2dp"
-                        android:background="#E91E63"
-                        app:layout_constraintBottom_toTopOf="@+id/maxTxt"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/minValue"
-                        app:layout_constraintVertical_bias="0.5" />
 
-                    <TextView
-                        android:id="@+id/maxTxt"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:gravity="center"
-                        android:text="Max"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/maxValue"
-                        app:layout_constraintDimensionRatio="0.4:0.15"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/viewOnly"
-                        app:layout_constraintVertical_bias="0.5" />
 
-                    <TextView
+                   <!-- <TextView
                         android:id="@+id/maxValue"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -217,8 +193,8 @@
                         app:layout_constraintDimensionRatio="0.4:0.15"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/maxTxt"
-                        app:layout_constraintVertical_bias="0.5" />
+                        app:layout_constraintTop_toBottomOf="@+id/minValue"
+                        app:layout_constraintVertical_bias="0.5" />-->
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -238,8 +214,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideline4"
             app:layout_constraintTop_toBottomOf="@id/cl1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1:1">
+            app:layout_constraintBottom_toTopOf="@id/cl5"
+            app:layout_constraintDimensionRatio="1:0.5">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -268,9 +244,9 @@
                         android:id="@+id/img2"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/current"
+                        android:src="@drawable/temperatures"
                         app:layout_constraintBottom_toTopOf="@id/currentTxt2"
-                        app:layout_constraintDimensionRatio="0.4:0.10"
+                        app:layout_constraintDimensionRatio="0.4:0.06"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -281,12 +257,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:gravity="center"
-                        android:text="826 mA"
+                        android:text="41.0\u2103"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintDimensionRatio="0.4:0.15"
+                        app:layout_constraintDimensionRatio="0.4:0.10"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/img2" />
@@ -295,11 +271,262 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+
+
+
+
+
+
             </androidx.cardview.widget.CardView>
 
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/cl2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:0.5">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="#dcedc1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/temperatures"
+                        app:layout_constraintBottom_toTopOf="@id/currentTxt3"
+                        app:layout_constraintDimensionRatio="0.4:0.06"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="spread" />
+
+                    <TextView
+                        android:id="@+id/currentTxt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="41.0\u2103"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="0.4:0.10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img3" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl3"
+            app:layout_constraintBottom_toTopOf="@id/cl6"
+            app:layout_constraintDimensionRatio="1:0.5">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="#dcedc1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/temperatures"
+                        app:layout_constraintBottom_toTopOf="@id/currentTxt4"
+                        app:layout_constraintDimensionRatio="0.4:0.10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="spread" />
+
+                    <TextView
+                        android:id="@+id/currentTxt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="41.0\u2103"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="0.4:0.10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img4" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:0.5">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="#dcedc1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/temperatures"
+                        app:layout_constraintBottom_toTopOf="@id/currentTxt5"
+                        app:layout_constraintDimensionRatio="0.4:0.10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="spread" />
+
+                    <TextView
+                        android:id="@+id/currentTxt5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="41.0\u2103"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="0.4:0.10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img5" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
