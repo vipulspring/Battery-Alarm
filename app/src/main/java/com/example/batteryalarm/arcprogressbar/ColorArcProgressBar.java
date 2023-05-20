@@ -14,6 +14,7 @@ import android.graphics.RectF;
 import android.graphics.SweepGradient;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -132,7 +133,8 @@ public class ColorArcProgressBar extends View{
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int width = (int) (2 * longdegree + progressWidth + diameter + 2 * DEGREE_PROGRESS_DISTANCE);
-        int height= (int) (2 * longdegree + progressWidth + diameter + 2 * DEGREE_PROGRESS_DISTANCE);
+        int height= /*(int) (2 * longdegree + progressWidth + diameter + 2 * DEGREE_PROGRESS_DISTANCE)*/310;
+        Log.i("TAG", "onMeasure: " + width + " - " + height);
         setMeasuredDimension(width, height);
     }
 
