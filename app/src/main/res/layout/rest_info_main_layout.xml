@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+app:cardBackgroundColor="@color/black"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="@dimen/card_elevation"
+    >
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="3"
+        app:columnCount="3"
+        app:orientation="horizontal"
+        app:rowCount="2">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discharging"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Charging"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unplugged"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Health"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Good"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Technology"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Li-ion"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Max.Capacity"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4500 mAh"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cur Capacity"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1700 mAh"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            android:layout_marginRight="2dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Not Charging"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            android:layout_marginRight="2dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Charging"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unplugged"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Health"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Good"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccentBlueDark"/>
+
+        </LinearLayout>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+
+</androidx.cardview.widget.CardView>

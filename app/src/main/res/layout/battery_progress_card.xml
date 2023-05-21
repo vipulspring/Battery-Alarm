@@ -29,8 +29,8 @@
         <com.example.batteryalarm.arcprogressbar.ColorArcProgressBar
             android:id="@+id/batteryProgressBar"
             app:current_value="91"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -47,7 +47,7 @@
             app:is_need_unit="true"
             app:max_value="100"
             app:string_unit="Discharging"
-            app:total_engle="270"/>
+            app:total_engle="275"/>
 
         <ProgressBar
             android:id="@+id/battery_loading_progress_bar"
