@@ -19,6 +19,9 @@ colorArcProgressBar = findViewById(R.id.batteryProgressBar);
             colorArcProgressBar.setCurrentValues(i);
         }
 
+        //https://github.com/kyleduo/SwitchButton
+        //https://github.com/warkiz/IndicatorSeekBar
+
 
     }
 }

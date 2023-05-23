@@ -44,4 +44,10 @@ dependencies {
     implementation 'com.github.furkankaplan:fk-blur-view-android:1.0.1'
 
 
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+
+    implementation 'com.kyleduo.switchbutton:library:2.1.0'
+
+
+
 }
