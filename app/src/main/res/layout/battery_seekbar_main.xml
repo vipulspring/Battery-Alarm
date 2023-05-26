@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorBackgroundCard"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="15dp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintDimensionRatio="1:1">
+        android:layout_margin="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+
+        >
 
         <TextView
             android:id="@+id/bAlarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="BATTERY ALARM"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryGreenDark"
+            android:textColor="@color/white"
             android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/sb_default_measure_3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.kyleduo.switchbutton.SwitchButton
             android:id="@+id/sb_default_measure_3"
@@ -26,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:background="#fff"
+            android:background="@color/colorBackgroundCard"
             app:kswThumbWidth="20dp"
             app:kswTintColor="@color/colorPrimaryGreenDark"
             app:layout_constraintLeft_toRightOf="@id/bAlarm"
@@ -35,6 +44,58 @@
 
 
 
+        <!--<com.warkiz.widget.IndicatorSeekBar
+            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_max="100"
+            app:isb_min="0"
+            app:isb_progress="20"
+            app:isb_seek_smoothly="true"
+            app:isb_ticks_count="2"
+            app:isb_show_tick_marks_type="square"
+            app:isb_tick_marks_size="20dp"
+            app:isb_tick_marks_drawable="@mipmap/ic_launcher"
+            app:isb_show_tick_texts="true"
+            app:isb_tick_texts_size="15sp"
+            app:isb_tick_texts_color="@color/white"
+            app:isb_thumb_color="@color/colorPrimaryYellowDark"
+            app:isb_thumb_size="20dp"
+            app:isb_show_indicator="circular_bubble"
+
+            app:isb_indicator_color="@color/colorPrimaryRed"
+            app:isb_indicator_text_color="@color/colorAccent"
+            app:isb_indicator_text_size="18sp"
+            app:isb_track_background_color="@color/colorPrimaryGreenDark"
+            app:isb_track_background_size="2dp"
+            app:isb_track_progress_color="@color/colorPrimaryGreenLight"
+            app:isb_track_progress_size="4dp"
+            app:isb_only_thumb_draggable="true"
+            app:layout_constraintTop_toBottomOf="@id/bAlarm"/>-->
+
+        <com.warkiz.widget.IndicatorStayLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bAlarm">
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_show_tick_texts="true"
+                app:isb_show_indicator="rectangle"
+                app:isb_max="100"
+                app:isb_min="0"
+                app:isb_progress="20"
+
+                app:isb_ticks_count="2"
+                app:isb_thumb_drawable="@drawable/selector_thumb_ripple_drawable"
+                app:isb_thumb_size="26dp" />
+        </com.warkiz.widget.IndicatorStayLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
