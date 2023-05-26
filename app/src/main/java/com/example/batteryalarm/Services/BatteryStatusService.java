@@ -21,6 +21,8 @@ import androidx.core.app.NotificationCompat;
 
 import com.example.batteryalarm.R;
 
+import java.util.concurrent.TimeUnit;
+
 public class BatteryStatusService extends Service {
 
     private static final int NOTIFICATION_ID = 1;
@@ -156,4 +158,48 @@ public class BatteryStatusService extends Service {
                 .setSmallIcon(R.drawable.charging_animation_giff)
                 .build();
     }
+
+
+
+
+   /* Observable<Integer> observable2 = Observable
+            .interval(3, TimeUnit.SECONDS)
+            .observeOn(Schedulers.io())
+            .map(new Function<Long, Integer>() {
+                @Override
+                public Integer apply(Long aLong) throws Exception {
+
+
+                    BatteryManager manager = (BatteryManager) getSystemService(Context.BATTERY_SERVICE);
+                    int value = manager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW);
+                    Log.i("TAG", "onReceiveCurrent: " + value);
+
+
+                    return value;
+                }
+            })
+            .repeat()
+            .subscribeOn(AndroidSchedulers.mainThread());
+       observable2.subscribe(new Observer<Integer>() {
+        @Override
+        public void onSubscribe(Disposable d) {
+
+        }
+
+        @Override
+        public void onNext(Integer integer) {
+            Log.i(TAG, "onNext26: "+ integer);
+        }
+
+        @Override
+        public void onError(Throwable e) {
+
+        }
+
+        @Override
+        public void onComplete() {
+
+        }
+    });*/
+
 }
